@@ -1,0 +1,25 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Back-end code for Paul Dill's new portfolio app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dillweed5446/portfolio_2.0.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Paul",
+    "Dill",
+    "developer"
+  ],
+  "author": "Paul Dill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dillweed5446/portfolio_2.0/issues"
+  },
+  "homepage": "https://github.com/Dillweed5446/portfolio_2.0#readme"
+}
