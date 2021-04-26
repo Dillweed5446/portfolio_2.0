@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import PD from './PD_Profile_Pic.resized.jpg'
+import HeaderBar from './headerbar'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <HeaderBar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
+      </header>
+      <body>
+      <img src={PD} className="Profile_Pic" alt="PD" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -18,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </body>
     </div>
   );
 }
