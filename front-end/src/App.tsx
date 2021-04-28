@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import PD from './PD_Profile_Pic.resized.jpg'
 import HeaderBar from './headerbar'
-import './App.css';
+import './App.css'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <HeaderBar />
       <header className="App-header">
-        
+
       </header>
       <body>
       <img src={PD} className="Profile_Pic" alt="PD" />
@@ -25,7 +25,7 @@ function App() {
         </a>
       </body>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

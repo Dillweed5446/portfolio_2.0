@@ -1,14 +1,24 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useRef } from 'react'
 import styled from 'styled-components'
 
 interface Props {
     children?: React.ReactNode,
     style?: object,
-    menuOptions: Array<any> | Object
+    menuOptions: Array<any> | Object,
 
 }
 
 export const Button = styled.button`
+color: green;
+background-color: red;
+border-bottom: 2px solid #daa520;
+padding: .5rem;
+margin: .5rem;
+background: transparent;
+font-weight: 800;
+border-radius: .7rem;
+`
+const MenuLink = styled.a`
 color: green;
 background-color: red;
 border-bottom: 2px solid #daa520;
@@ -36,24 +46,34 @@ border-radius: .5rem;
 
 export default function DropdownMenu ({ children, style, menuOptions }: Props) {
   const [menuOpen, toggleMenu] = useState(false)
+  const menuRef = useRef(null)
+
+  // const handleBlur = (e:any) => {
+  //   e.preventDefault()
+  //   toggleMenu(!menuOpen)
+  // }
+
+  const handleClick = (e:any) => {
+    e.preventDefault()
+    toggleMenu(!menuOpen)
+  }
 
   return (
     <div style={{ position: 'sticky' }}>
-        <Button onFocus={() => toggleMenu(!menuOpen)}
-                onBlur={() => toggleMenu(!menuOpen)}> {children}
-          <div>
             {menuOpen
-              ? <MenuContainer>
+              ? <Fragment>
+                <Button >{children}</Button>
+                <MenuContainer>
                 {Object.values(menuOptions).map((item, index) => (
-                  <Button key={index} >
-                    <a href={item.href} onClick={() => toggleMenu(!menuOpen)}>{item.name}</a>
-                  </Button>
+                    <MenuLink key={index} href={item.href} target="_blank" rel="noopener noreferrer">{item.name}</MenuLink>
                 ))}
               </MenuContainer>
-              : <Fragment />
+              </Fragment>
+              : <Button onFocus={handleClick} // useRef hook may be the key to solving this problem.
+              > {children}</Button>
             }
-          </div>
-        </Button>
+          {/* </div> */}
+
     </div>
   )
 }
