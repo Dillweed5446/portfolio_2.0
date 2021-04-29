@@ -1,5 +1,6 @@
-import React, { Fragment, useState, useRef } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import OutsideClickHandler from 'react-outside-click-handler'
 
 interface Props {
     children?: React.ReactNode,
@@ -46,7 +47,6 @@ border-radius: .5rem;
 
 export default function DropdownMenu ({ children, style, menuOptions }: Props) {
   const [menuOpen, toggleMenu] = useState(false)
-  const menuRef = useRef(null)
 
   // const handleBlur = (e:any) => {
   //   e.preventDefault()
@@ -59,21 +59,25 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
   }
 
   return (
-    <div style={{ position: 'sticky' }}>
+    <div style={{ position: 'sticky' }} >
+      <OutsideClickHandler onOutsideClick={handleClick}>
             {menuOpen
-              ? <Fragment>
+              ? <div>
                 <Button >{children}</Button>
                 <MenuContainer>
-                {Object.values(menuOptions).map((item, index) => (
-                    <MenuLink key={index} href={item.href} target="_blank" rel="noopener noreferrer">{item.name}</MenuLink>
+                  {/* {console.log(menuRef)} */}
+                {Object.values(menuOptions).reverse().map((item, index) => (
+                    <MenuLink key={index} href={item.href} target="_blank" rel="noopener noreferrer"
+                    onClick={() => toggleMenu(!menuOpen)}>{item.name}</MenuLink>
                 ))}
               </MenuContainer>
-              </Fragment>
-              : <Button onFocus={handleClick} // useRef hook may be the key to solving this problem.
+              </div>
+              : <Button onFocus={handleClick}
+                         // useRef hook may be the key to solving this problem.
               > {children}</Button>
             }
           {/* </div> */}
-
+          </OutsideClickHandler>
     </div>
   )
 }
