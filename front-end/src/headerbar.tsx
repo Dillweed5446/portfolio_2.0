@@ -2,7 +2,7 @@ import React from 'react'
 // import styled from 'styled-components'
 import DropdownMenu, { Button } from './dropdownMenu'
 import { BlogPostsArray } from './blogPosts'
-import './headerbar.css'
+import './styles/headerbar.css'
 
 export default function HeaderBar () {
   return (

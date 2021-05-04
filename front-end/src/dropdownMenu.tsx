@@ -1,27 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import OutsideClickHandler from 'react-outside-click-handler'
+import './styles/dropdownMenu.css'
 
 interface Props {
     children?: React.ReactNode,
     style?: object,
-    menuOptions: Array<any> | Object,
-
+    menuOptions: Array<any> | Object
 }
 
 export const Button = styled.button`
 color: green;
-background-color: red;
-border-bottom: 2px solid #daa520;
-padding: .5rem;
-margin: .5rem;
-background: transparent;
-font-weight: 800;
-border-radius: .7rem;
-`
-const MenuLink = styled.a`
-color: green;
-background-color: red;
 border-bottom: 2px solid #daa520;
 padding: .5rem;
 margin: .5rem;
@@ -63,12 +52,12 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
       <OutsideClickHandler onOutsideClick={handleClick}>
             {menuOpen
               ? <div>
-                <Button >{children}</Button>
+                <Button>{children}</Button>
                 <MenuContainer>
                   {/* {console.log(menuRef)} */}
                 {Object.values(menuOptions).reverse().map((item, index) => (
-                    <MenuLink key={index} href={item.href} target="_blank" rel="noopener noreferrer"
-                    onClick={() => toggleMenu(!menuOpen)}>{item.name}</MenuLink>
+                    <a key={index} href={item.href} target="_blank" rel="noopener noreferrer"
+                    className='menulink' onClick={() => toggleMenu(!menuOpen)}>{item.name}</a>
                 ))}
               </MenuContainer>
               </div>
