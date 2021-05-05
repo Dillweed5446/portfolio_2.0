@@ -37,11 +37,6 @@ border-radius: .5rem;
 export default function DropdownMenu ({ children, style, menuOptions }: Props) {
   const [menuOpen, toggleMenu] = useState(false)
 
-  // const handleBlur = (e:any) => {
-  //   e.preventDefault()
-  //   toggleMenu(!menuOpen)
-  // }
-
   const handleClick = (e:any) => {
     e.preventDefault()
     toggleMenu(!menuOpen)
@@ -54,7 +49,6 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
               ? <div>
                 <Button>{children}</Button>
                 <MenuContainer>
-                  {/* {console.log(menuRef)} */}
                 {Object.values(menuOptions).reverse().map((item, index) => (
                     <a key={index} href={item.href} target="_blank" rel="noopener noreferrer"
                     className='menulink' onClick={() => toggleMenu(!menuOpen)}>{item.name}</a>
@@ -62,10 +56,8 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
               </MenuContainer>
               </div>
               : <Button onFocus={handleClick}
-                         // useRef hook may be the key to solving this problem.
               > {children}</Button>
             }
-          {/* </div> */}
           </OutsideClickHandler>
     </div>
   )

@@ -1,20 +1,25 @@
 import React from 'react'
-// import styled from 'styled-components'
-import PD from './PD_Profile_Pic.resized.jpg'
+import styled from 'styled-components'
+import PD from './Portfolio_Photos/PD_Profile_Pic.resized.jpg'
 
 interface Props {
-    className?: string
+    className?: string,
+    children?: React.ReactNode,
+    style?: object
 }
 
-// const {component} = styled.{someComponent}`
+export const SectionContainer = styled.div`
+max-width: 100%;
+border-bottom: .2rem solid black;
+flex: auto;
+padding: 5rem;
+`
 
-// `
-
-export default function PersonalBio ({ className }: Props) {
+export default function PersonalBio ({ className, children, style }: Props) {
   return (
-    <div>
+    <SectionContainer>
         <p>This will be my personal bio section.</p>
         <img src={PD} className="Profile_Pic" alt="PD" />
-    </div>
+    </SectionContainer>
   )
 }
