@@ -1,8 +1,7 @@
 import React/*, { useState, useEffect } */ from 'react'
 // import styled from 'styled-components'
 import { SectionContainer } from './bio'
-import hualalaiPano from './Portfolio_Photos/hualalai_pano.jpeg'
-// import atSign from './Portfolio_Photos/AT_sign.JPEG'
+
 interface Props {
     className?: string
 }
@@ -35,7 +34,7 @@ export default function PhotoHeader ({ className }: Props) {
   // }, [imageString])
 
   return (
-<SectionContainer style={{ backgroundImage: `url(${hualalaiPano})` }}>
+<SectionContainer style={{ backgroundImage: `url(${hualalaiCaldera})`, height: '250px' }}>
     <p>I plan to use the React Awesome slider for this section with a nice looking title section.</p>
 </SectionContainer>
   )
