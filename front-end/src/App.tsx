@@ -11,12 +11,12 @@ function App () {
     <div className="App">
       <HeaderBar />
       <header className="App-header">
-        <PhotoHeader className="section"/>
+        <PhotoHeader />
       </header>
       <body>
-        <PersonalBio className="section"/>
-        <Projects className="section"/>
-        <ContactForm className="section"/>
+        <PersonalBio />
+        <Projects />
+        <ContactForm />
       </body>
     </div>
   )

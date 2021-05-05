@@ -1,5 +1,6 @@
 import React from 'react'
 // import styled from 'styled-components'
+import { SectionContainer } from './bio'
 
 interface Props {
     className?: string
@@ -11,8 +12,8 @@ interface Props {
 
 export default function ContactForm ({ className }: Props) {
   return (
-<div>
+<SectionContainer>
     <p>This section will hold a CRUD contact form that I&apos;ll build using Node.js and MariaDB</p>
-</div>
+</SectionContainer>
   )
 }
