@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import PD from './Portfolio_Photos/PD_Profile_Pic.resized.jpg'
+import PD from './resized_photos/PD_Profile_Pic.resized.jpg'
 
 interface Props {
     className?: string,
