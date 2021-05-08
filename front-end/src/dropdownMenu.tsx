@@ -44,7 +44,7 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
 
   return (
     <div style={{ position: 'sticky' }} >
-      <OutsideClickHandler onOutsideClick={handleClick}>
+      <OutsideClickHandler onOutsideClick={() => toggleMenu(false)}>
             {menuOpen
               ? <div>
                 <Button>{children}</Button>
