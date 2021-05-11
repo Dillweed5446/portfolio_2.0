@@ -10,8 +10,8 @@ interface Props {
 }
 
 export const Button = styled.button`
-color: green;
-border-bottom: 2px solid #daa520;
+color: #8acb88ff;
+border-bottom: 2px solid #4ea5d9ff;
 padding: .5rem;
 margin: .5rem;
 background: transparent;
@@ -47,6 +47,7 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
       <OutsideClickHandler onOutsideClick={() => toggleMenu(false)}>
             {menuOpen
               ? <div>
+                {/* Add hover effect to button */}
                 <Button>{children}</Button>
                 <MenuContainer>
                 {Object.values(menuOptions).reverse().map((item, index) => (

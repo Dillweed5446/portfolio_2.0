@@ -12,7 +12,7 @@ export const SectionContainer = styled.div`
 max-width: 100%;
 border-bottom: .2rem solid black;
 flex: auto;
-padding: 5rem;
+padding: 3rem;
 `
 
 export default function PersonalBio ({ className, children, style }: Props) {
