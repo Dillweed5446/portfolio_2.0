@@ -12,8 +12,8 @@ function App () {
       <HeaderBar />
       <header className="App-header">
         <PhotoHeader>
-          <h1 style={{ color: 'yellow', textShadow: '-1px 0 green, 0 1px black, 1px 0 green, 0 -1px black' }}>Paul Dill</h1>
-          <h2 style={{ color: 'green', textShadow: '-1px 0 yellow, 0 1px white, 1px 0 yellow, 0 -1px white' }}>Junior Full Stack Developer</h2>
+          <h1 style={{ color: '#ffc857ff', textShadow: '-1px 0 #14080eff, 0 1px black, 1px 0 #14080eff, 0 -1px black' }}>Paul Dill</h1>
+          <h2 style={{ color: '#14080eff', textShadow: '-1px 0 #ffc857ff, 0 1px white, 1px 0 #ffc857ff, 0 -1px white' }}>Junior Full Stack Developer</h2>
         </PhotoHeader>
       </header>
       <body>
