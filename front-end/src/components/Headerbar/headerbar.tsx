@@ -1,8 +1,8 @@
 import React from 'react'
-// import styled from 'styled-components'
-import DropdownMenu, { Button } from './dropdownMenu'
+import DropdownMenu from './dropdownMenu'
+import { Button } from '../../styles/globalStyledComponents'
 import { BlogPostsArray } from './blogPosts'
-import './styles/headerbar.css'
+import '../../styles/headerbar.css'
 
 export default function HeaderBar () {
   return (

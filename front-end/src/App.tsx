@@ -1,9 +1,9 @@
 import React from 'react'
-import HeaderBar from './headerbar'
-import PhotoHeader from './photoHead'
-import PersonalBio from './bio'
-import Projects from './projects'
-import ContactForm from './contact'
+import HeaderBar from './components/Headerbar/headerbar'
+import PhotoHeader from './components/photoHead'
+import PersonalBio from './components/bio'
+import Projects from './components/projects'
+import ContactForm from './components/contact'
 import './styles/App.css'
 
 function App () {
@@ -17,8 +17,8 @@ function App () {
         </PhotoHeader>
       </header>
       <body>
-        <PersonalBio />
-        <Projects />
+        <PersonalBio/>
+        <Projects/>
         <ContactForm />
       </body>
     </div>
