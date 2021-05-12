@@ -1,6 +1,6 @@
 import React from 'react'
 // import styled from 'styled-components'
-import { SectionContainer } from './bio'
+import { SectionContainer } from '../styles/globalStyledComponents'
 
 interface Props {
     className?: string

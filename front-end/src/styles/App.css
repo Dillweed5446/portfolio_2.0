@@ -4,19 +4,12 @@
   justify-content: space-around;
   align-items: stretch;
   align-content: center;
+  width: 100vw;
 }
 
 .Profile_Pic {
   height: 40vmin;
   pointer-events: none;
-}
-
-.Section {
-  max-width: 70%;
-  border-bottom: .2rem solid black;
-  /* flex: auto; */
-  padding: 5rem;
-  background: #8acb88ff;
 }
 
 .App-header {

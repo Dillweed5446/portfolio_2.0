@@ -1,38 +1,13 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { Button, MenuContainer } from '../../styles/globalStyledComponents'
 import OutsideClickHandler from 'react-outside-click-handler'
-import './styles/dropdownMenu.css'
+import '../../styles/dropdownMenu.css'
 
 interface Props {
     children?: React.ReactNode,
     style?: object,
     menuOptions: Array<any> | Object
 }
-
-export const Button = styled.button`
-color: #8acb88ff;
-border-bottom: 2px solid #4ea5d9ff;
-padding: .5rem;
-margin: .5rem;
-background: transparent;
-font-weight: 800;
-border-radius: .7rem;
-`
-
-const MenuContainer = styled.div`
-display: flex;
-flex-direction: column;
-background: rgb(211,211,211);
-justify-content: flex-start;
-align-items: center;
-position: absolute;
-overflow: auto;
-height: 10rem;
-width: 10rem;
-margin: 1rem;
-padding: 1rem;
-border-radius: .5rem;
-`
 
 export default function DropdownMenu ({ children, style, menuOptions }: Props) {
   const [menuOpen, toggleMenu] = useState(false)
