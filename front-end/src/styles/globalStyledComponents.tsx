@@ -33,36 +33,11 @@ padding: 1rem;
 border-radius: .5rem;
 `
 export const SectionTitle = styled.h2`
-textAlign: center;
+display: table;
 border-bottom: .2rem solid #ffc857ff;
 color: #ffc857ff;
-`
-
-export const GridContainer = styled.div`
-background-color: #4ea5d9ff;
-display: grid;
-width: 100vw;
-grid-template-rows: [top] 0 [title-start] 3rem [title-end] 27rem [first-card-end]
-                    27rem [second-card-end] 27rem [third-card-end] 3rem [end];
-grid-template-columns: [line1] 1fr [line2] 10fr [line3] 10fr [line4] 1fr [end];
-grid-template-areas:
-                    ". header header header ."
-                    ". card . card ."
-                    ". card . card ."
-                    ". card . card .";
-row-gap: 2rem;
-column-gap: 2%;
-`
-export const GridHeader = styled.div`
-grid-area: header;
-grid-row: title-start;
-grid-column-start: line2;
-grid-column-end: line4;
-place-self: center;
-`
-
-export const Card = styled.div`
-grid-area: card;
-background: #eee;
-border-radius: 2rem;
+text-align: center;
+margin: auto;
+font-size: 2.5rem;
+margin-bottom: 2rem;
 `

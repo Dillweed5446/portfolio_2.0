@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaCode, FaReact } from 'react-icons/fa'
+import { FaCode } from 'react-icons/fa'
 import { GoBrowser } from 'react-icons/go'
-import { SectionTitle, Card, GridContainer, GridHeader } from '../styles/globalStyledComponents'
+import { SectionTitle } from '../../styles/globalStyledComponents'
+import StyledIcons from './styledIcon'
+import '../../styles/projects.css'
+
 interface Props {
     className?: string,
-    style?: object
+    style?: object,
+    projectArray: Array<any>
 }
 
 const CardTitle = styled.h3`
@@ -39,15 +43,11 @@ font-weight: 800;
 border-radius: .7rem;
 `
 
-export default function Projects ({ className, style }: Props) {
+export default function Projects ({ className, style, projectArray }: Props) {
   // Create map function with array for projects so that I can add github link and auto populate the cards.
   // May try borrowing namedIcons module from Attila Goz to simplify this section
-  return (
-    <GridContainer style={{ borderBottom: '.2rem solid black' }}>
-      <GridHeader>
-        <SectionTitle>Projects</SectionTitle>
-      </GridHeader>
-      <Card style={{ gridRow: 'title-end', gridColumn: 'line2' }}>
+
+  /* <Card style={{ gridRow: 'title-end', gridColumn: 'line2' }}>
         <CardTitle>this.portfolio</CardTitle>
         <CardImage>Insert Image Here.</CardImage>
         <CardIcons><FaReact/></CardIcons>
@@ -70,7 +70,6 @@ export default function Projects ({ className, style }: Props) {
         <CardImage>Insert Image Here.</CardImage>
         <CardIcons><FaReact/></CardIcons>
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-          {/* Deploy dis buggah then add url! */}
           <a href="" ><CardButton><GoBrowser/>  Demo</CardButton></a>
           <a href="https://github.com/Dillweed5446/library_crud" ><CardButton><FaCode/>  Code</CardButton></a>
         </div>
@@ -92,7 +91,29 @@ export default function Projects ({ className, style }: Props) {
           <a href="https://pdill.dev" ><CardButton><GoBrowser/>  Demo</CardButton></a>
           <a href="https://github.com/Dillweed5446/pdill.dev" ><CardButton><FaCode/>  Code</CardButton></a>
         </div>
-      </Card>
-    </GridContainer>
+      </Card> */
+  return (
+    <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }}>
+      <header>
+          <SectionTitle>Projects</SectionTitle>
+        </header >
+      <body>
+        <div className="grid-container">
+        {projectArray.map((item:any, index:number) => {
+          return (
+          <div className="card" key={`card-${index + 1}`}>
+            <CardTitle>{item.title}</CardTitle>
+            <CardImage>{item.image}</CardImage>
+            <CardIcons><StyledIcons iconArray={item.icons} /></CardIcons>
+            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+            <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a>
+            <a href={item.codeHref}><CardButton><FaCode/>  Code</CardButton></a>
+            </div>
+          </div>
+          )
+        })}
+        </div>
+      </body>
+    </div >
   )
 }

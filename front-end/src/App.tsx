@@ -2,8 +2,9 @@ import React from 'react'
 import HeaderBar from './components/Headerbar/headerbar'
 import PhotoHeader from './components/photoHead'
 import PersonalBio from './components/bio'
-import Projects from './components/projects'
+import Projects from './components/Projects/projects'
 import ContactForm from './components/contact'
+import { ProjectsArray } from './components/Projects/projectsArray'
 import './styles/App.css'
 
 function App () {
@@ -18,7 +19,7 @@ function App () {
       </header>
       <body>
         <PersonalBio/>
-        <Projects/>
+        <Projects projectArray={ProjectsArray}/>
         <ContactForm />
       </body>
     </div>

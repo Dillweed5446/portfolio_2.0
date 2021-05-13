@@ -4,7 +4,8 @@
   justify-content: space-around;
   align-items: stretch;
   align-content: center;
-  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .Profile_Pic {
