@@ -34,8 +34,8 @@ border-radius: .5rem;
 `
 export const SectionTitle = styled.h2`
 display: table;
-border-bottom: .2rem solid #ffc857ff;
-color: #ffc857ff;
+border-bottom: .2rem solid ${props => props.color};
+color: ${props => props.color};
 text-align: center;
 margin: auto;
 font-size: 2.5rem;

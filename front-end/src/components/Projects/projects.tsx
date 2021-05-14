@@ -17,11 +17,12 @@ color: #14080eff;
 text-align: center;
 `
 
-const CardImage = styled.div`
+const CardImage = styled.img`
 width: 80%;
 height: 10rem;
 background-color: green;
-margin: auto;
+margin-left: 10%;
+margin-right: 10%;
 `
 
 const CardButton = styled.button`
@@ -40,7 +41,7 @@ export default function Projects ({ className, style, projectArray }: Props) {
   return (
     <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }}>
       <header>
-          <SectionTitle>Projects</SectionTitle>
+          <SectionTitle color='#ffc857ff'>Projects</SectionTitle>
         </header >
       <body>
         <div className="grid-container">
@@ -48,7 +49,7 @@ export default function Projects ({ className, style, projectArray }: Props) {
           return (
           <div className="card" key={`card-${index + 1}`}>
             <CardTitle>{item.title}</CardTitle>
-            <CardImage>{item.image}</CardImage>
+            <CardImage src={item.image}/>
             <StyledIcons iconArray={item.icons}/>
             <div style={{ textAlign: 'center', marginTop: '1rem' }}>
             <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a>

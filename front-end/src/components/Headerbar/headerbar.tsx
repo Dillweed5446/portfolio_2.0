@@ -4,7 +4,11 @@ import { Button } from '../../styles/globalStyledComponents'
 import { BlogPostsArray } from './blogPosts'
 import '../../styles/headerbar.css'
 
-export default function HeaderBar () {
+interface Props {
+  id: string
+}
+
+export default function HeaderBar ({ id }: Props) {
   return (
 <div className='header'>
     <Button><a href='/#top'>Home</a></Button>

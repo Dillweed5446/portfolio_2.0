@@ -8,13 +8,18 @@
   overflow-x: hidden;
 }
 
+.bio {
+  background-color: #eee;
+  padding: 2rem;
+}
+
 .Profile_Pic {
   height: 40vmin;
+  border-radius: 2rem;
   pointer-events: none;
 }
 
 .App-header {
-  /* background-color: transparent; */
   min-height: 7vh;
   display: flex;
   flex-direction: row;
