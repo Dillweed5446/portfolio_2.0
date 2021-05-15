@@ -4,6 +4,7 @@ import PhotoHeader from './components/photoHead'
 import PersonalBio from './components/bio'
 import Projects from './components/Projects/projects'
 import ContactForm from './components/contact'
+import FooterBar from './components/footer'
 import { ProjectsArray } from './components/Projects/projectsArray'
 import './styles/App.css'
 
@@ -23,6 +24,9 @@ function App () {
           <Projects projectArray={ProjectsArray}/>
           <ContactForm />
         </body>
+        <footer>
+          <FooterBar title="Designed and developed on the Big Island by Paul Dill" />
+        </footer>
       </div>
     </div>
   )

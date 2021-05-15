@@ -48,3 +48,7 @@ button:hover{
 a:hover{
   color: #ffc857ff;
 }
+
+.footer a {
+  padding: 0.2rem 1.3rem;
+}
