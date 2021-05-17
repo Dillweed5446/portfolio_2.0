@@ -2,6 +2,7 @@
   "name": "react_portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dillweed5446.github.io/portfolio_2.0/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -12,6 +13,7 @@
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "@typescript-eslint/parser": "4.0.1",
+    "axios": "^0.21.1",
     "eslint": "^7.12.1",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",

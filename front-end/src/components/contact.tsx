@@ -1,5 +1,4 @@
-import { EPERM } from 'constants'
-import React from 'react'
+import React, { useState } from 'react'
 // import styled from 'styled-components'
 import { SectionContainer, SectionTitle } from '../styles/globalStyledComponents'
 
@@ -12,10 +11,16 @@ interface Props {
 // `
 
 export default function ContactForm ({ className }: Props) {
-  const handleChange (event) {
-    
-      [event.target.name]: event.target.value
+  const [userName, setUserName] = useState('')
+  const [userEmail, setUserEmail] = useState('')
+  const [companyName, setCompanyName] = useState('')
+  const [userComment, setUserComment] = useState('')
+
+  const handleSubmit = (event: React.SyntheticEvent): void => {
+    event.preventDefault()
+    console.log(`Name: ${userName}, Comment: ${userComment}`)
   }
+
   return (
 <SectionContainer>
   <header>
@@ -26,19 +31,19 @@ export default function ContactForm ({ className }: Props) {
   <form onSubmit={handleSubmit}>
             <label>
             <p>Name</p>
-            <textarea type='text' name='name' onChange={ handleChange } value={state.name} style={{ flex: 1 }}/>
+            <textarea name='name' onChange={e => setUserName(e.target.value) } value={userName} style={{ flex: 1 }}/>
             </label>
             <label>
             <p>Email</p>
-            <textarea type='text' name='email' onChange={ handleChange } value={state.email} style={{ flex: 1 }}/>
+            <textarea name='email' onChange={e => setUserEmail(e.target.value) } value={userEmail} style={{ flex: 1 }}/>
             </label>
             <label>
             <p>Company Name</p>
-            <textarea type='text' name='company' onChange={ handleChange } value={state.company} style={{ flex: 1 }}/>
+            <textarea name='company' onChange={e => setCompanyName(e.target.value) } value={companyName} style={{ flex: 1 }}/>
             </label>
             <label>
             <p>Comment</p>
-            <textarea type='text' name='comment' onChange={ handleChange } value={state.comment} style={{ flex: 1 }}/>
+            <textarea name='comment' onChange={e => setUserComment(e.target.value) } value={userComment} style={{ flex: 1 }}/>
             </label>
             <button type='submit'>Submit</button>
         </form>
