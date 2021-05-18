@@ -19,13 +19,12 @@ export default function ContactForm ({ className }: Props) {
 
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault()
+    // console.log(`name: ${userName}, email: ${userEmail}, company: ${companyName}, comment: ${userComment}`)
     Axios.post('http://localhost:5000/contact', {
-      params: {
-        name: userName,
-        email: userEmail,
-        company: companyName,
-        comment: userComment
-      }
+      name: `${userName}`,
+      email: userEmail,
+      company: companyName,
+      comment: userComment
     }).then((response) => { console.log(response) })
     // .then((data) => console.log(data))
   }

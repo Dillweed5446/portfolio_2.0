@@ -3,10 +3,11 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 const app = express()
 
-app.use(cors({
-  origin: 'http://localhost:3000/',
-  credentials: true
-}))
+app.options('*', cors())
+// app.use(cors({
+//   origin: 'http://localhost:3000/',
+//   credentials: true
+// }))
 app.use(express.json())
 app.listen(5000, () => console.log('Server running on port 5000'))
 
@@ -28,25 +29,26 @@ contactEmail.verify(error => {
   }
 })
 
-app.route('/contact').post((request, response) => {
-  const name = request.body.name
-  const email = request.body.email
-  const company = request.body.company
-  const comment = request.body.comment
-  const mail = {
-    from: name,
-    to: 'paul@pdill.dev',
-    subject: 'Portfolio Contact Form Message',
-    html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Company: ${company}</p><p>Message: ${comment}</p>`
-  }
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      response.json({ status: 'failed' })
-    } else {
-      response.json({ status: 'success' })
+app.route('/contact')
+  .post((request, response) => {
+    const name = request.body.name
+    const email = request.body.email
+    const company = request.body.company
+    const comment = request.body.comment
+    const mail = {
+      from: name,
+      to: 'paul@pdill.dev',
+      subject: 'Portfolio Contact Form Message',
+      html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Company: ${company}</p><p>Message: ${comment}</p>`
     }
+    contactEmail.sendMail(mail, (error) => {
+      if (error) {
+        response.json({ status: 'failed' })
+      } else {
+        response.json({ status: 'success' })
+      }
+    })
   })
-})
 
 // 'use strict'
 // const nodemailer = require('nodemailer')
