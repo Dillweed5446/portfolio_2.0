@@ -6,6 +6,7 @@ max-width: 100%;
 border-bottom: .2rem solid black;
 flex: auto;
 padding: 5rem;
+background: ${props => props.color}
 `
 
 export const Button = styled.button`

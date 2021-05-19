@@ -3,34 +3,34 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 const app = express()
 
-app.options('*', cors())
-// app.use(cors({
-//   origin: 'http://localhost:3000/',
-//   credentials: true
-// }))
+app.use(cors({
+  origin: '*',
+  credentials: true
+}))
 app.use(express.json())
 app.listen(5000, () => console.log('Server running on port 5000'))
 
-const contactEmail = nodemailer.createTransport({
-//   host: 'https://dillweed5446.github.io/portfolio_2.0/',  // Use this for build
-  host: 'smtp.pdill.dev',
-  port: 587,
-  auth: {
-    user: 'paul@pdill.dev',
-    pass: 'FOUcIUAG)s.wdfI!'
-  }
-})
+// const contactEmail = nodemailer.createTransport({
+// //   host: 'https://dillweed5446.github.io/portfolio_2.0/',  // Use this for build
+// //   host: 'smtp.pdill.dev',
+//   port: 587
+//   auth: {
+//     user: 'paul@pdill.dev',
+//     pass: 'FOUcIUAG)s.wdfI!'
+//   }
+// })
 
-contactEmail.verify(error => {
-  if (error) {
-    console.log(error)
-  } else {
-    console.log('Ready to send')
-  }
-})
+// transporter.verify(error => {
+//   if (error) {
+//     console.log(error)
+//   } else {
+//     console.log('Ready to send')
+//   }
+// })
 
 app.route('/contact')
   .post((request, response) => {
+    console.log(request.body.name)
     const name = request.body.name
     const email = request.body.email
     const company = request.body.company
@@ -41,50 +41,52 @@ app.route('/contact')
       subject: 'Portfolio Contact Form Message',
       html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Company: ${company}</p><p>Message: ${comment}</p>`
     }
-    contactEmail.sendMail(mail, (error) => {
+    const smtpConfig = {
+      host: 'smtp.zoho.com',
+      port: 587,
+      secure: false,
+      auth: {
+        user: 'paul@pdill.dev',
+        pass: ''
+      }
+    }
+    const transporter = nodemailer.createTransport(smtpConfig)
+    transporter.sendMail(mail, (error) => {
       if (error) {
-        response.json({ status: 'failed' })
+        response.send(`Failed: ${error}`)
       } else {
-        response.json({ status: 'success' })
+        response.send('Buggah worked!')
       }
     })
   })
 
-// 'use strict'
-// const nodemailer = require('nodemailer')
-
-// // async..await is not allowed in global scope, must use a wrapper
-// async function main () {
-//   // Generate test SMTP service account from ethereal.email
-//   // Only needed if you don't have a real mail account for testing
-// //   const testAccount = await nodemailer.createTestAccount()
-
-//   // create reusable transporter object using the default SMTP transport
-//   const transporter = nodemailer.createTransport({
-//     host: 'smtp.pdill.dev',
-//     port: 587,
-//     secure: false, // true for 465, false for other ports
+// POST route from contact form
+// app.post('/contact', (req, res) => {
+//   // Instantiate the SMTP server
+//   const smtpTrans = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 465,
+//     secure: true,
 //     auth: {
-//       user: 'paul@pdill.dev', // generated ethereal user
-//       pass: 'FOUcIUAG)s.wdfI!' // generated ethereal password
+//       user: GMAIL_USER,
+//       pass: GMAIL_PASS
 //     }
 //   })
 
-//   // send mail with defined transport object
-//   const info = await transporter.sendMail({
-//     from: '"Fred Foo 👻" <foo@example.com>', // sender address
-//     to: 'paul@pdill.dev, baz@example.com', // list of receivers
-//     subject: 'Hello ✔', // Subject line
-//     text: 'Hello world?', // plain text body
-//     html: '<b>Hello world?</b>' // html body
+//   // Specify what the email will look like
+//   const mailOpts = {
+//     from: 'Your sender info here', // This is ignored by Gmail
+//     to: GMAIL_USER,
+//     subject: 'New message from contact form at tylerkrys.ca',
+//     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+//   }
+
+//   // Attempt to send the email
+//   smtpTrans.sendMail(mailOpts, (error, response) => {
+//     if (error) {
+//       res.render('contact-failure') // Show a page indicating failure
+//     } else {
+//       res.render('contact-success') // Show a page indicating success
+//     }
 //   })
-
-//   console.log('Message sent: %s', info.messageId)
-//   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-//   // Preview only available when sending through an Ethereal account
-//   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
-//   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-// }
-
-// main().catch(console.error)
+// })
