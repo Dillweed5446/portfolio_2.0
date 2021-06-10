@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio_2.0/static/css/main.fdf38d49.chunk.css",
-    "main.js": "/portfolio_2.0/static/js/main.62660a02.chunk.js",
-    "main.js.map": "/portfolio_2.0/static/js/main.62660a02.chunk.js.map",
+    "main.js": "/portfolio_2.0/static/js/main.8add06c9.chunk.js",
+    "main.js.map": "/portfolio_2.0/static/js/main.8add06c9.chunk.js.map",
     "runtime-main.js": "/portfolio_2.0/static/js/runtime-main.726411ba.js",
     "runtime-main.js.map": "/portfolio_2.0/static/js/runtime-main.726411ba.js.map",
     "static/js/2.6ed4b89e.chunk.js": "/portfolio_2.0/static/js/2.6ed4b89e.chunk.js",
@@ -41,49 +41,7 @@
   "entrypoints": [
     "static/js/runtime-main.726411ba.js",
     "static/js/2.6ed4b89e.chunk.js",
-
-    "main.css": "/static/css/main.fdf38d49.chunk.css",
-    "main.js": "/static/js/main.62660a02.chunk.js",
-    "main.js.map": "/static/js/main.62660a02.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ee6e523a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ee6e523a.js.map",
-    "static/js/2.58345d6a.chunk.js": "/static/js/2.58345d6a.chunk.js",
-    "static/js/2.58345d6a.chunk.js.map": "/static/js/2.58345d6a.chunk.js.map",
-    "static/js/3.a0b76a83.chunk.js": "/static/js/3.a0b76a83.chunk.js",
-    "static/js/3.a0b76a83.chunk.js.map": "/static/js/3.a0b76a83.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.fdf38d49.chunk.css.map": "/static/css/main.fdf38d49.chunk.css.map",
-    "static/js/2.58345d6a.chunk.js.LICENSE.txt": "/static/js/2.58345d6a.chunk.js.LICENSE.txt",
-    "static/media/PD_Profile_Pic.resized.afd65bc8.jpg": "/static/media/PD_Profile_Pic.resized.afd65bc8.jpg",
-    "static/media/css3.74d7bcc1.svg": "/static/media/css3.74d7bcc1.svg",
-    "static/media/hualalai_caldera_resize.f973b0b0.JPEG": "/static/media/hualalai_caldera_resize.f973b0b0.JPEG",
-    "static/media/hualalai_sunrise_resize.3dd1a0d6.JPEG": "/static/media/hualalai_sunrise_resize.3dd1a0d6.JPEG",
-    "static/media/huiwaa.1f5ad114.png": "/static/media/huiwaa.1f5ad114.png",
-    "static/media/javscript.90384b2d.svg": "/static/media/javscript.90384b2d.svg",
-    "static/media/kawika_sunrise_resize.800b5dcd.JPEG": "/static/media/kawika_sunrise_resize.800b5dcd.JPEG",
-    "static/media/kohala_field_resize.eb976e66.JPEG": "/static/media/kohala_field_resize.eb976e66.JPEG",
-    "static/media/kohala_morning_resize.f45bf29c.JPEG": "/static/media/kohala_morning_resize.f45bf29c.JPEG",
-    "static/media/mariadb.77cee16a.svg": "/static/media/mariadb.77cee16a.svg",
-    "static/media/material-ui-1.fd510ed8.svg": "/static/media/material-ui-1.fd510ed8.svg",
-    "static/media/mauna_kea_sunset_resize.a4a607ae.JPEG": "/static/media/mauna_kea_sunset_resize.a4a607ae.JPEG",
-    "static/media/mauna_loa_caldera_resize.48e34860.JPEG": "/static/media/mauna_loa_caldera_resize.48e34860.JPEG",
-    "static/media/mauna_loa_road_resize.cf45ad22.JPEG": "/static/media/mauna_loa_road_resize.cf45ad22.JPEG",
-    "static/media/max_patch2_resize.c094fea2.JPEG": "/static/media/max_patch2_resize.c094fea2.JPEG",
-    "static/media/max_patch_resize.1e3b78e9.JPEG": "/static/media/max_patch_resize.1e3b78e9.JPEG",
-    "static/media/next-js.1b2b52c0.svg": "/static/media/next-js.1b2b52c0.svg",
-    "static/media/nodejs-icon.615ffbea.svg": "/static/media/nodejs-icon.615ffbea.svg",
-    "static/media/okoe_bay_resize.17464cdb.JPEG": "/static/media/okoe_bay_resize.17464cdb.JPEG",
-    "static/media/portfolio1.b2a80729.png": "/static/media/portfolio1.b2a80729.png",
-    "static/media/portfolio2.662dc26d.png": "/static/media/portfolio2.662dc26d.png",
-    "static/media/react_js.f1484e29.svg": "/static/media/react_js.f1484e29.svg",
-    "static/media/styled-components-1.6e34e546.svg": "/static/media/styled-components-1.6e34e546.svg",
-    "static/media/typescript.a6305a73.svg": "/static/media/typescript.a6305a73.svg",
-    "static/media/umi_resize.f1aa74f9.JPEG": "/static/media/umi_resize.f1aa74f9.JPEG"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.ee6e523a.js",
-    "static/js/2.58345d6a.chunk.js",
     "static/css/main.fdf38d49.chunk.css",
-    "static/js/main.62660a02.chunk.js"
+    "static/js/main.8add06c9.chunk.js"
   ]
 }
