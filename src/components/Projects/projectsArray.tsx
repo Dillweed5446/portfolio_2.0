@@ -20,7 +20,6 @@ export const ProjectsArray: Array<any> = [
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: TypeScript, tech: 'TypeScript' },
       { icon: Nodejs, tech: 'Node.js' },
-      { icon: MariaDB, tech: 'MariaDB' },
       { icon: CSS3, tech: 'CSS3' },
       { icon: StyledComponents, tech: 'Styled-Components' }
     ],

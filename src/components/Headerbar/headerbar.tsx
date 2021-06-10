@@ -4,19 +4,19 @@ import { Button } from '../../styles/globalStyledComponents'
 import { BlogPostsArray } from './blogPosts'
 import '../../styles/headerbar.css'
 
-interface Props {
-  id: string
-}
+export default function HeaderBar () {
+  function clickHandler (id: string) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
-export default function HeaderBar ({ id }: Props) {
   return (
 <div className='header'>
-    <Button><a href='/#top'>Home</a></Button>
-    <Button><a href='/#about'>About</a></Button>
-    <Button><a href='/#projects'>Projects</a></Button>
+    <Button onClick={() => clickHandler('home')} >Home</Button>
+    <Button onClick={() => clickHandler('about')} >About</Button>
+    <Button onClick={() => clickHandler('projects')}>Projects</Button>
     <DropdownMenu menuOptions={BlogPostsArray}>Blog Posts</DropdownMenu>
-    <Button><a href='/#contact'>Contact Me</a></Button>
-    <Button><a>Resume</a></Button>
+    <Button onClick={() => clickHandler('contact')}>Contact Me</Button>
+    <Button>Resume</Button>
 </div>
   )
 }
