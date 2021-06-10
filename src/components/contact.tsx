@@ -11,6 +11,7 @@ export default function ContactForm ({ className }: Props) {
   const [userEmail, setUserEmail] = useState('')
   const [companyName, setCompanyName] = useState('')
   const [userComment, setUserComment] = useState('')
+  // const divRef = React.useRef<HTMLDivElement>(null)
 
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault()
@@ -34,9 +35,11 @@ export default function ContactForm ({ className }: Props) {
     }).then((response) => { console.log(response) })
   }
 
+  // eslint-disable-next-line react/display-name
   return (
-    <SectionContainer color='#eee'>
+    <SectionContainer color='#eee' id='contact'>
       <header>
+     {/* eslint-disable-next-line react/no-string-refs */}
       <SectionTitle>Contact</SectionTitle>
       <p>Questions, comments, words of wisdom?  Please add your contact info and a brief comment.</p>
       </header>

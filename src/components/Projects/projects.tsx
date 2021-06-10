@@ -39,7 +39,7 @@ border-radius: .7rem;
 
 export default function Projects ({ className, style, projectArray }: Props) {
   return (
-    <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }}>
+    <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }} id='projects'>
       <header>
           <SectionTitle color='#ffc857ff'>Projects</SectionTitle>
         </header >

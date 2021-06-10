@@ -10,7 +10,7 @@ interface Props {
 
 export default function PersonalBio ({ className, children, style }: Props) {
   return (
-    <SectionContainer className="bio">
+    <SectionContainer className="bio" id='about'>
       <header style={{ }}>
         <SectionTitle color="#14080eff">Hello, and welcome to my portfolio!</SectionTitle>
       </header>

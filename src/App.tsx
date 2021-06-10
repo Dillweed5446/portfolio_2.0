@@ -10,8 +10,8 @@ import './styles/App.css'
 
 function App () {
   return (
-    <div>
-      <HeaderBar id="top"/>
+    <div id='home'>
+      <HeaderBar/>
       <div className="App">
         <header className="App-header">
           <PhotoHeader>
@@ -22,7 +22,7 @@ function App () {
         <body>
           <PersonalBio/>
           <Projects projectArray={ProjectsArray}/>
-          <ContactForm />
+          <ContactForm/>
         </body>
         <footer>
           <FooterBar title="Designed and developed on the Big Island by Paul Dill" />
