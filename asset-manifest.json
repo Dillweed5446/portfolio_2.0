@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio_2.0/static/css/main.fdf38d49.chunk.css",
-    "main.js": "/portfolio_2.0/static/js/main.8add06c9.chunk.js",
-    "main.js.map": "/portfolio_2.0/static/js/main.8add06c9.chunk.js.map",
+    "main.js": "/portfolio_2.0/static/js/main.3e982903.chunk.js",
+    "main.js.map": "/portfolio_2.0/static/js/main.3e982903.chunk.js.map",
     "runtime-main.js": "/portfolio_2.0/static/js/runtime-main.726411ba.js",
     "runtime-main.js.map": "/portfolio_2.0/static/js/runtime-main.726411ba.js.map",
     "static/js/2.6ed4b89e.chunk.js": "/portfolio_2.0/static/js/2.6ed4b89e.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.fdf38d49.chunk.css.map": "/portfolio_2.0/static/css/main.fdf38d49.chunk.css.map",
     "static/js/2.6ed4b89e.chunk.js.LICENSE.txt": "/portfolio_2.0/static/js/2.6ed4b89e.chunk.js.LICENSE.txt",
     "static/media/PD_Profile_Pic.resized.afd65bc8.jpg": "/portfolio_2.0/static/media/PD_Profile_Pic.resized.afd65bc8.jpg",
+    "static/media/Paul_Dill_junior_developer_PDF.5fe203d9.pdf": "/portfolio_2.0/static/media/Paul_Dill_junior_developer_PDF.5fe203d9.pdf",
     "static/media/css3.74d7bcc1.svg": "/portfolio_2.0/static/media/css3.74d7bcc1.svg",
     "static/media/hualalai_caldera_resize.f973b0b0.JPEG": "/portfolio_2.0/static/media/hualalai_caldera_resize.f973b0b0.JPEG",
     "static/media/hualalai_sunrise_resize.3dd1a0d6.JPEG": "/portfolio_2.0/static/media/hualalai_sunrise_resize.3dd1a0d6.JPEG",
@@ -42,6 +43,6 @@
     "static/js/runtime-main.726411ba.js",
     "static/js/2.6ed4b89e.chunk.js",
     "static/css/main.fdf38d49.chunk.css",
-    "static/js/main.8add06c9.chunk.js"
+    "static/js/main.3e982903.chunk.js"
   ]
 }
