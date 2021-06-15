@@ -3,6 +3,7 @@ import DropdownMenu from './dropdownMenu'
 import { Button } from '../../styles/globalStyledComponents'
 import { BlogPostsArray } from './blogPosts'
 import '../../styles/headerbar.css'
+import resume from '../../Paul_Dill_junior_developer_PDF.pdf'
 
 export default function HeaderBar () {
   function clickHandler (id: string) {
@@ -16,7 +17,7 @@ export default function HeaderBar () {
     <Button onClick={() => clickHandler('projects')}>Projects</Button>
     <DropdownMenu menuOptions={BlogPostsArray}>Blog Posts</DropdownMenu>
     <Button onClick={() => clickHandler('contact')}>Contact Me</Button>
-    <Button>Resume</Button>
+    <Button><a href={resume}>Resume</a></Button>
 </div>
   )
 }
