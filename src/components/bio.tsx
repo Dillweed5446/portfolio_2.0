@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionContainer, SectionTitle } from '../styles/globalStyledComponents'
-import PD from '../images/PD_Profile_Pic.resized.jpg'
+import PD from '../images/PD_Profile_Pic.resized.webp'
 
 interface Props {
     className?: string,
