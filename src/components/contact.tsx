@@ -64,7 +64,7 @@ export default function ContactForm ({ className }: Props) {
                 <p>Comment</p>
                 <textarea name='comment' onChange={e => setUserComment(e.target.value)} value={userComment} style={{ width: '30rem', height: '10rem' }}/>
                 </label>
-                <button type='submit' style={{ height: '2rem', fontSize: '1.2rem', background: '#4ea5d9ff' }}>Submit</button>
+                <button type='submit' style={{ height: '2rem', fontSize: '1.2rem', background: '#4ea5d9ff', margin: '1rem 0' }}>Submit</button>
               </div>
             </form>
       </body>
