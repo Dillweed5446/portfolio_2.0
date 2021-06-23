@@ -11,7 +11,7 @@ export default function ContactForm ({ className }: Props) {
   const [userEmail, setUserEmail] = useState('')
   const [companyName, setCompanyName] = useState('')
   const [userComment, setUserComment] = useState('')
-  // const divRef = React.useRef<HTMLDivElement>(null)
+  const [contactSubmitted, setContactSubmitted] = useState(false)
 
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault()
@@ -32,14 +32,14 @@ export default function ContactForm ({ className }: Props) {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': 'http://localhost:5000/contact'
       }
-    }).then((response) => { console.log(response) })
+    }).then((response) => { setContactSubmitted(true) })
   }
 
-  // eslint-disable-next-line react/display-name
   return (
-    <SectionContainer color='#eee' id='contact'>
+    !contactSubmitted
+      ? (
+      <SectionContainer color='#eee' id='contact'>
       <header>
-     {/* eslint-disable-next-line react/no-string-refs */}
       <SectionTitle>Contact</SectionTitle>
       <p>Questions, comments, words of wisdom?  Please add your contact info and a brief comment.</p>
       </header>
@@ -64,10 +64,22 @@ export default function ContactForm ({ className }: Props) {
                 <p>Comment</p>
                 <textarea name='comment' onChange={e => setUserComment(e.target.value)} value={userComment} style={{ width: '30rem', height: '10rem' }}/>
                 </label>
-                <button type='submit' style={{ height: '2rem', fontSize: '1.2rem', background: '#4ea5d9ff' }}>Submit</button>
+                <button type='submit' style={{ height: '2rem', fontSize: '1.2rem', background: '#4ea5d9ff', margin: '1rem 0' }}>Submit</button>
               </div>
             </form>
       </body>
     </SectionContainer>
+        )
+      : (
+      <div id='contact'>
+        <header>
+          <SectionTitle>Contact</SectionTitle>
+        </header>
+        <div style={{ padding: '0 2rem 2rem 2rem', textAlign: 'center' }}>
+          <h2>Thank you!  Mahalo!  Merci!  Gracias!  Grazie!  ありがとう!</h2>
+          <p>Thanks for reaching out.  I&apos;ll be sure to get back to you as soon as possible.</p>
+        </div>
+      </div>
+        )
   )
 }
