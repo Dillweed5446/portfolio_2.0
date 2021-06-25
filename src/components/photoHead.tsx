@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { css } from '@emotion/react'
+import MoonLoader from 'react-spinners/MoonLoader'
+import Preload from 'image-preload'
 import { SectionContainer } from '../styles/globalStyledComponents'
 import hualalaiCaldera from '../images/hualalai_caldera_resize.webp'
 import hualalaiSunrise from '../images/hualalai_sunrise_resize.webp'
@@ -17,11 +20,22 @@ interface Props {
     children: React.ReactNode
 }
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`
+
 export default function PhotoHeader ({ className, children }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   const imageArray = [hualalaiCaldera, maunaKeaSunset, maxPatch2, maunaLoaRoad, hualalaiSunrise, okoeBay,
     kawikaSunrise, kohalaField, kohalaMorning, maunaLoaCaldera, maxPatch, umi]
+
+  Preload(imageArray, {
+    onComplete: () => setIsLoading(false)
+  })
 
   useEffect(() => {
     window.setTimeout(() => {
@@ -32,6 +46,13 @@ export default function PhotoHeader ({ className, children }: Props) {
   }, [currentIndex])
 
   return (
+    isLoading
+      ? (
+      <div>
+        <MoonLoader color='blue' loading={true} css={override} size={150} />
+      </div>
+        )
+      : (
 <SectionContainer style={{
   backgroundImage: `url(${imageArray[currentIndex]})`,
   transition: 'left 2s ease-in-out, background-image ease-out 2s',
@@ -41,5 +62,6 @@ export default function PhotoHeader ({ className, children }: Props) {
 }}>
 {children}
 </SectionContainer>
+        )
   )
 }
