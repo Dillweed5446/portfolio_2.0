@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio_2.0/static/css/main.0d952c12.chunk.css",
-    "main.js": "/portfolio_2.0/static/js/main.62fdec40.chunk.js",
-    "main.js.map": "/portfolio_2.0/static/js/main.62fdec40.chunk.js.map",
+    "main.js": "/portfolio_2.0/static/js/main.33417b9b.chunk.js",
+    "main.js.map": "/portfolio_2.0/static/js/main.33417b9b.chunk.js.map",
     "runtime-main.js": "/portfolio_2.0/static/js/runtime-main.511f33e6.js",
     "runtime-main.js.map": "/portfolio_2.0/static/js/runtime-main.511f33e6.js.map",
     "static/js/2.6bbbf37a.chunk.js": "/portfolio_2.0/static/js/2.6bbbf37a.chunk.js",
@@ -17,8 +17,8 @@
     "static/media/css3.74d7bcc1.svg": "/portfolio_2.0/static/media/css3.74d7bcc1.svg",
     "static/media/hualalai_caldera_resize.9a84acc6.webp": "/portfolio_2.0/static/media/hualalai_caldera_resize.9a84acc6.webp",
     "static/media/hualalai_sunrise_resize.4aa686fc.webp": "/portfolio_2.0/static/media/hualalai_sunrise_resize.4aa686fc.webp",
-    "static/media/huiwaa.2822f1c6.webp": "/portfolio_2.0/static/media/huiwaa.2822f1c6.webp",
     "static/media/huiwaa.8aa21a2c.webp": "/portfolio_2.0/static/media/huiwaa.8aa21a2c.webp",
+    "static/media/huiwaa_full.1f5ad114.png": "/portfolio_2.0/static/media/huiwaa_full.1f5ad114.png",
     "static/media/javscript.90384b2d.svg": "/portfolio_2.0/static/media/javscript.90384b2d.svg",
     "static/media/kawika_sunrise_resize.5fe96108.webp": "/portfolio_2.0/static/media/kawika_sunrise_resize.5fe96108.webp",
     "static/media/kohala_field_resize.e7d66cad.webp": "/portfolio_2.0/static/media/kohala_field_resize.e7d66cad.webp",
@@ -32,10 +32,10 @@
     "static/media/next-js.1b2b52c0.svg": "/portfolio_2.0/static/media/next-js.1b2b52c0.svg",
     "static/media/nodejs-icon.615ffbea.svg": "/portfolio_2.0/static/media/nodejs-icon.615ffbea.svg",
     "static/media/okoe_bay_resize.16041cee.webp": "/portfolio_2.0/static/media/okoe_bay_resize.16041cee.webp",
-    "static/media/portfolio1.8ee8f936.webp": "/portfolio_2.0/static/media/portfolio1.8ee8f936.webp",
     "static/media/portfolio1.96122bcc.webp": "/portfolio_2.0/static/media/portfolio1.96122bcc.webp",
+    "static/media/portfolio1_full.b2a80729.png": "/portfolio_2.0/static/media/portfolio1_full.b2a80729.png",
     "static/media/portfolio2.0e40afe9.webp": "/portfolio_2.0/static/media/portfolio2.0e40afe9.webp",
-    "static/media/portfolio2.1a5c31f0.webp": "/portfolio_2.0/static/media/portfolio2.1a5c31f0.webp",
+    "static/media/portfolio2_full.662dc26d.png": "/portfolio_2.0/static/media/portfolio2_full.662dc26d.png",
     "static/media/react_js.f1484e29.svg": "/portfolio_2.0/static/media/react_js.f1484e29.svg",
     "static/media/styled-components-1.6e34e546.svg": "/portfolio_2.0/static/media/styled-components-1.6e34e546.svg",
     "static/media/typescript.a6305a73.svg": "/portfolio_2.0/static/media/typescript.a6305a73.svg",
@@ -45,6 +45,6 @@
     "static/js/runtime-main.511f33e6.js",
     "static/js/2.6bbbf37a.chunk.js",
     "static/css/main.0d952c12.chunk.css",
-    "static/js/main.62fdec40.chunk.js"
+    "static/js/main.33417b9b.chunk.js"
   ]
 }
