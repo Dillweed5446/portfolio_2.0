@@ -54,7 +54,7 @@ export const ProjectsArray: Array<any> = [
       { icon: CSS3, tech: 'CSS3' },
       { icon: Chartjs, tech: 'Chart.js' }
     ],
-    demoHref: 'https://pdill.dev/paddleWrapper',
+    demoHref: 'https://pdill-dev.vercel.app//paddleWrapper',
     codeHref: 'https://github.com/Dillweed5446/pdill.dev/tree/master/pdill.dev/components/Paddler_App'
   },
   // {
@@ -78,7 +78,7 @@ export const ProjectsArray: Array<any> = [
       { icon: Nextjs, tech: 'Next.js' },
       { icon: MaterialUI, tech: 'Material-UI' },
       { icon: CSS3, tech: 'CSS3' }],
-    demoHref: 'https://pdill.dev',
+    demoHref: 'https://pdill-dev.vercel.app/',
     codeHref: 'https://github.com/Dillweed5446/pdill.dev'
   }
 ]
