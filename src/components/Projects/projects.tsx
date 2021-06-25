@@ -42,7 +42,7 @@ border-radius: .7rem;
 
 export default function Projects ({ className, style, projectArray }: Props) {
   return (
-    window.matchMedia('(max-device-width: 650px)').matches
+    window.matchMedia('(max-device-width: 849px)').matches
       ? (
     <div style={{ padding: '.5rem', backgroundColor: '#4ea5d9ff' }} id='projects'>
       <header>

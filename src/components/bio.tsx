@@ -10,7 +10,7 @@ interface Props {
 
 export default function PersonalBio ({ className, children, style }: Props) {
   return (
-    window.matchMedia('(max-device-width: 650px)').matches
+    window.matchMedia('(max-device-width: 849px)').matches
       ? (
       <SectionContainer className="bio" id='about' style={{ padding: '2rem' }}>
       <header style={{ }}>

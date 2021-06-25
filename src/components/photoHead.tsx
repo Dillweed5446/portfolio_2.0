@@ -17,7 +17,8 @@ import okoeBay from '../images/okoe_bay_resize.webp'
 import umi from '../images/umi_resize.webp'
 interface Props {
     className?: string,
-    children: React.ReactNode
+    children: React.ReactNode,
+    style?: object
 }
 
 const override = css`
