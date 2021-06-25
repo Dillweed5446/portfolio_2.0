@@ -9,12 +9,12 @@ import Nextjs from '../../images/Icons/next-js.svg'
 import Nodejs from '../../images/Icons/nodejs-icon.svg'
 import StyledComponents from '../../images/Icons/styled-components-1.svg'
 import TypeScript from '../../images/Icons/typescript.svg'
-import Portfolio2 from '../../images/Screenshots/portfolio2.webp'
-import Portfolio1 from '../../images/Screenshots/portfolio1.webp'
-import HuiWaa from '../../images/Screenshots/huiwaa.webp'
-import Portfolio2Mobile from '../../images/mobile/screenshots/portfolio2.webp'
-import Portfolio1Mobile from '../../images/mobile/screenshots/portfolio1.webp'
-import HuiWaaMobile from '../../images/mobile/screenshots/huiwaa.webp'
+import Portfolio2 from '../../images/Screenshots/portfolio2_full.png'
+import Portfolio1 from '../../images/Screenshots/portfolio1_full.png'
+import HuiWaa from '../../images/Screenshots/huiwaa_full.png'
+import Portfolio2Mobile from '../../images/Screenshots/portfolio2.webp'
+import Portfolio1Mobile from '../../images/Screenshots/portfolio1.webp'
+import HuiWaaMobile from '../../images/Screenshots/huiwaa.webp'
 
 export const ProjectsArray: Array<any> = [
   {
