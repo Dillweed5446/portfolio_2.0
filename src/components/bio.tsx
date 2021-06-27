@@ -51,7 +51,7 @@ export default function PersonalBio ({ className, children, style }: Props) {
             Please use my <a style={{ color: '#4ea5d9ff' }} onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' })}>contact form</a> below to drop me a message.
           </p>
         </div>
-        <img src={PD} className="Profile_Pic" alt="PD" style={{ flex: 1, width: '5rem', height: 'auto', marginLeft: '3rem' }}/>
+        <img src={PD} className="Profile_Pic" alt="PD" style={{ flex: 2, width: 'auto', height: 'auto', marginLeft: '3rem' }}/>
       </body>
     </SectionContainer>
         )
