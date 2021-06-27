@@ -16,7 +16,8 @@ export const BlogPostsArray: Array<any> =
       { name: 'Day 9 - 100 Days of Node', href: 'https://pauldill.dev/?p=141' },
       { name: 'Day 10 - 100 Days of Node', href: 'https://pauldill.dev/?p=150' },
       { name: 'Day 11 - 100 Days of Node', href: 'https://pauldill.dev/?p=158' },
-      { name: 'Day 12 - 100 Days of Node', href: 'https://pauldill.dev/?p=169' }
+      { name: 'Day 12 - 100 Days of Node', href: 'https://pauldill.dev/?p=169' },
+      { name: '100 Days of Node.js – What happened?', href: 'https://pauldill.dev/?p=175' }
     ]
 
 // Build a web scraper that will scrape your blog for the name and url, then use Node.js to populate
