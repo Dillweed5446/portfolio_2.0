@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FaGithub, FaLinkedin, FaWordpress, FaStackOverflow } from 'react-icons/fa'
 
 interface Props {
-    title: string,
+    title?: string,
     style?: object
 }
 
@@ -22,20 +22,13 @@ color: #ffc857ff;
 font-size: 2rem;
 `
 
-// const Links = styled.div`
-// padding: 1rem;
-
-// `
-
 export default function FooterBar ({ style, title }: Props) {
   return (
     <StyledFooterBar className='footer'>
-        {/* <Links> */}
             <a href='https://www.linkedin.com/in/paul-dill-99b498aa/'><FaLinkedin /></a>
             <a href='https://github.com/Dillweed5446'><FaGithub /></a>
             <a href='https://stackoverflow.com/users/12745384/pdill5446?tab=profile'><FaStackOverflow /></a>
             <a href='https://pauldill.dev/'><FaWordpress /></a>
-        {/* <a></Links> */}
         <p style={{ margin: '.5rem', fontSize: '1.2rem' }}>{title}</p>
     </StyledFooterBar>
   )
