@@ -24,8 +24,7 @@ export default function PersonalBio ({ className, children, style }: Props) {
             to stay in peak physical conditioning.  It&apos;s been a tough journey, but much progress has been made.  </p>
             <p style={{ marginTop: 0, fontSize: '1.5rem' }}>Being a software engineer takes a commitment to a lifetime of learning.  Personally,
             I&apos;m excited for the road ahead.  I can&apos;t yet see where this path will take me, but I&apos;m optimistic about the possibilities.
-            To quote E.L. Doctorow, &quot;Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way.&quot;
-            - This applies equally to coding!  Thanks for checking out my portfolio.
+            Thanks for checking out my portfolio.
             Please use my <a style={{ color: '#4ea5d9ff' }} onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' })}>contact form</a> below to drop me a message.
           </p>
         <img src={PD} className="Profile_Pic" alt="PD" style={{ flex: 1, width: '15rem', height: 'auto' }}/>
@@ -46,8 +45,7 @@ export default function PersonalBio ({ className, children, style }: Props) {
             to stay in peak physical conditioning.  It&apos;s been a tough journey, but much progress has been made.  </p>
             <p style={{ marginTop: 0, fontSize: '1.5rem' }}>Being a software engineer takes a commitment to a lifetime of learning.  Personally,
             I&apos;m excited for the road ahead.  I can&apos;t yet see where this path will take me, but I&apos;m optimistic about the possibilities.
-            To quote E.L. Doctorow, &quot;Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way.&quot;
-            - This applies equally to coding!  Thanks for checking out my portfolio.
+            Thanks for checking out my portfolio.
             Please use my <a style={{ color: '#4ea5d9ff' }} onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' })}>contact form</a> below to drop me a message.
           </p>
         </div>
