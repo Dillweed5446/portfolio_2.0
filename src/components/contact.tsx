@@ -62,7 +62,7 @@ export default function ContactForm ({ className }: Props) {
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', maxWidth: '90%' }}>
                 <label>
                 <p>Comment</p>
-                <textarea name='comment' onChange={e => setUserComment(e.target.value)} value={userComment} style={{ width: '30rem', height: '10rem' }}/>
+                <textarea name='comment' onChange={e => setUserComment(e.target.value)} value={userComment} style={{ width: '20rem', height: '10rem' }}/>
                 </label>
                 <button type='submit' style={{ height: '2rem', fontSize: '1.2rem', background: '#4ea5d9ff', margin: '1rem 0' }}>Submit</button>
               </div>
