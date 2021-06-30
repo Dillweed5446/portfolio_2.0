@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import MoonLoader from 'react-spinners/MoonLoader'
 import { css } from '@emotion/react'
@@ -48,6 +48,10 @@ export default function ContactForm ({ className }: Props) {
       .then(() => { setContactSubmitted(true) })
       .catch(err => alert(err))
   }
+
+  useEffect(() => {
+    console.log('Waiting...')
+  }, [waiting])
 
   if (waiting) {
     return (
