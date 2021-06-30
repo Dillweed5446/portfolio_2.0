@@ -47,7 +47,13 @@ export default function ContactForm ({ className }: Props) {
       .catch(err => alert(err))
   }
 
-  if (!contactSubmitted && window.matchMedia('(max-device-width: 849px)').matches) {
+  if (waiting) {
+    return (
+      <div>
+      <MoonLoader color='blue' loading={true} css={override} size={150} />
+    </div>
+    )
+  } else if (!contactSubmitted && window.matchMedia('(max-device-width: 849px)').matches) {
     return (
       <SectionContainer color='#eee' id='contact' style={{ padding: '1rem' }}>
       <header>
@@ -115,12 +121,6 @@ export default function ContactForm ({ className }: Props) {
         </body>
       </SectionContainer>
     )
-  } else if (waiting) {
-    return (
-      <div>
-      <MoonLoader color='blue' loading={true} css={override} size={150} />
-    </div>
-    )
   } else {
     return (
       <div id='contact'>
@@ -129,7 +129,7 @@ export default function ContactForm ({ className }: Props) {
         </header>
         <div style={{ padding: '0 2rem 2rem 2rem', textAlign: 'center' }}>
           <h2>Thank you!  Mahalo!  Merci!  Gracias!  Grazie!  ありがとう!</h2>
-          <p>Thanks for reaching out.  I&apos;ll be sure to get back to you as soon as possible.</p>
+          <p>Thanks for reaching out.  I&apos;ll get back to you as soon as possible.</p>
         </div>
       </div>
     )
