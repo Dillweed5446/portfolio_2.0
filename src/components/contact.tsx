@@ -24,13 +24,15 @@ export default function ContactForm ({ className }: Props) {
 
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault()
+    setWaiting(true)
     if (userName.length < 3) {
       alert('Name must be more than 3 characters')
+      setWaiting(false)
     }
     if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(userEmail)) {
       alert('Invalid Email')
+      setWaiting(false)
     }
-    setWaiting(true)
     Axios.post('https://pd-portfolio-contact.herokuapp.com/contact', {
       name: userName,
       email: userEmail,
