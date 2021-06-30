@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
+import MoonLoader from 'react-spinners/MoonLoader'
+import { css } from '@emotion/react'
 import { SectionContainer, SectionTitle } from '../styles/globalStyledComponents'
 
 interface Props {
     className?: string
 }
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`
 
 export default function ContactForm ({ className }: Props) {
   const [userName, setUserName] = useState('')
@@ -12,6 +20,7 @@ export default function ContactForm ({ className }: Props) {
   const [companyName, setCompanyName] = useState('')
   const [userComment, setUserComment] = useState('')
   const [contactSubmitted, setContactSubmitted] = useState(false)
+  const [waiting, setWaiting] = useState(false)
 
   const handleSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault()
@@ -21,6 +30,7 @@ export default function ContactForm ({ className }: Props) {
     if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(userEmail)) {
       alert('Invalid Email')
     }
+    setWaiting(true)
     Axios.post('https://pd-portfolio-contact.herokuapp.com/contact', {
       name: userName,
       email: userEmail,
@@ -32,7 +42,8 @@ export default function ContactForm ({ className }: Props) {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': 'https://pd-portfolio-contact.herokuapp.com/contact'
       }
-    }).then((response) => { setContactSubmitted(true) })
+    }).then(() => setWaiting(false))
+      .then(() => { setContactSubmitted(true) })
       .catch(err => alert(err))
   }
 
@@ -103,6 +114,12 @@ export default function ContactForm ({ className }: Props) {
               </form>
         </body>
       </SectionContainer>
+    )
+  } else if (waiting) {
+    return (
+      <div>
+      <MoonLoader color='blue' loading={true} css={override} size={150} />
+    </div>
     )
   } else {
     return (
