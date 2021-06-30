@@ -21,7 +21,7 @@ export default function ContactForm ({ className }: Props) {
     if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(userEmail)) {
       alert('Invalid Email')
     }
-    Axios.post('http://localhost:5000/contact', {
+    Axios.post('https://pd-portfolio-contact.herokuapp.com/contact', {
       name: userName,
       email: userEmail,
       company: companyName,
@@ -30,7 +30,7 @@ export default function ContactForm ({ className }: Props) {
     {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:5000/contact'
+        'Access-Control-Allow-Origin': 'https://pd-portfolio-contact.herokuapp.com/contact'
       }
     }).then((response) => { setContactSubmitted(true) })
       .catch(err => alert(err))

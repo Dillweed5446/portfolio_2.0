@@ -13,7 +13,7 @@ export default function PersonalBio ({ className, children, style }: Props) {
     window.matchMedia('(max-device-width: 849px)').matches
       ? (
       <SectionContainer className="bio" id='about' style={{ padding: '2rem' }}>
-      <header style={{ }}>
+      <header >
         <SectionTitle color="#14080eff">Hello, and welcome to my portfolio!</SectionTitle>
       </header>
       <body style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -33,7 +33,7 @@ export default function PersonalBio ({ className, children, style }: Props) {
         )
       : (
     <SectionContainer className="bio" id='about'>
-      <header style={{ }}>
+      <header >
         <SectionTitle color="#14080eff">Hello, and welcome to my portfolio!</SectionTitle>
       </header>
       <body style={{ display: 'flex' }}>
