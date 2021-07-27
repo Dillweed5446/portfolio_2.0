@@ -47,7 +47,7 @@ export default function HeaderBar () {
                   <Button><a href={resume}>Resume</a></Button>
               </MenuContainer>
               </div>
-              : <Button style={{ fontSize: 'x-large', margin: 0 }} onFocus={handleClick}
+              : <Button style={{ fontSize: 'x-large', margin: 0, cursor: 'pointer' }} onClick={handleClick}
               > ☰</Button>
             }
           </OutsideClickHandler>
