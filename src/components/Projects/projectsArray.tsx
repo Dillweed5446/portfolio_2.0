@@ -12,12 +12,19 @@ import TypeScript from '../../images/Icons/typescript.svg'
 import Portfolio2 from '../../images/Screenshots/portfolio2.png'
 import Portfolio1 from '../../images/Screenshots/portfolio1.png'
 import Library from '../../images/Screenshots/library_crud.png'
+import Mother from '../../images/Screenshots/mothercupboard.png'
 import HuiWaa from '../../images/Screenshots/huiwaa.png'
+import Portfolio2Mobile from '../../images/Screenshots/portfolio2.webp'
+import Portfolio1Mobile from '../../images/Screenshots/portfolio1.webp'
+import HuiWaaMobile from '../../images/Screenshots/huiwaa.webp'
+import LibraryMobile from '../../images/Screenshots/library_crud.webp'
+import MotherMobile from '../../images/Screenshots/mothercupboard.webp'
 
 export const ProjectsArray: Array<any> = [
   {
     title: 'this.portfolio',
     image: Portfolio2,
+    mobileImage: Portfolio2Mobile,
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: TypeScript, tech: 'TypeScript' },
       { icon: Nodejs, tech: 'Node.js' },
@@ -30,6 +37,7 @@ export const ProjectsArray: Array<any> = [
   {
     title: 'Library CRUD',
     image: Library,
+    mobileImage: LibraryMobile,
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: JavaScript, tech: 'JavaScript' },
       { icon: Nodejs, tech: 'Node.js' },
@@ -42,6 +50,7 @@ export const ProjectsArray: Array<any> = [
   {
     title: 'Hui Wa\'a Weather',
     image: HuiWaa,
+    mobileImage: HuiWaaMobile,
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: JavaScript, tech: 'JavaScript' },
       { icon: Nextjs, tech: 'Next.js' },
@@ -49,12 +58,13 @@ export const ProjectsArray: Array<any> = [
       { icon: CSS3, tech: 'CSS3' },
       { icon: Chartjs, tech: 'Chart.js' }
     ],
-    demoHref: 'https://pdill.dev/paddleWrapper',
+    demoHref: 'https://pdill-dev.vercel.app//paddleWrapper',
     codeHref: 'https://github.com/Dillweed5446/pdill.dev/tree/master/pdill.dev/components/Paddler_App'
   },
   {
     title: 'MotherCupboard',
-    image: '',
+    image: Mother,
+    mobileImage: MotherMobile,
     icons: [{ icon: ReactIcon, tech: 'React-Native' },
       { icon: JavaScript, tech: 'JavaScript' },
       { icon: CSS3, tech: 'CSS3' },
@@ -66,12 +76,13 @@ export const ProjectsArray: Array<any> = [
   {
     title: 'Portfolio 1.0.0',
     image: Portfolio1,
+    mobileImage: Portfolio1Mobile,
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: JavaScript, tech: 'JavaScript' },
       { icon: Nextjs, tech: 'Next.js' },
       { icon: MaterialUI, tech: 'Material-UI' },
       { icon: CSS3, tech: 'CSS3' }],
-    demoHref: 'https://pdill.dev',
+    demoHref: 'https://pdill-dev.vercel.app/',
     codeHref: 'https://github.com/Dillweed5446/pdill.dev'
   }
 ]

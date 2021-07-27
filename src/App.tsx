@@ -25,7 +25,10 @@ function App () {
           <ContactForm/>
         </body>
         <footer>
-          <FooterBar title="Designed and developed on the Big Island by Paul Dill" />
+          { window.matchMedia('(max-device-width: 849px)').matches
+            ? <FooterBar />
+            : <FooterBar title="Designed and developed on the Big Island by Paul Dill" />
+  }
         </footer>
       </div>
     </div>

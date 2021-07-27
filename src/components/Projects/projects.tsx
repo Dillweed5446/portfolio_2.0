@@ -35,11 +35,40 @@ background: #8acb88ff;
 font-size: 2rem;
 font-weight: 800;
 border-radius: .7rem;
+@media (max-width: 650px) {
+  padding: .5rem;
+}
 `
 
 export default function Projects ({ className, style, projectArray }: Props) {
   return (
-    <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }} id='projects'>
+    window.matchMedia('(max-device-width: 849px)').matches
+      ? (
+    <div style={{ padding: '.5rem', backgroundColor: '#4ea5d9ff' }} id='projects'>
+      <header>
+          <SectionTitle color='#ffc857ff'>Projects</SectionTitle>
+        </header >
+      <body>
+        <div className="grid-container">
+        {projectArray.map((item:any, index:number) => {
+          return (
+          <div className="card" key={`card-${index + 1}`}>
+            <CardTitle>{item.title}</CardTitle>
+            <CardImage src={item.mobileImage}/>
+            <StyledIcons iconArray={item.icons}/>
+            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+            <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a>
+            <a href={item.codeHref}><CardButton><FaGithub/>  Code</CardButton></a>
+            </div>
+          </div>
+          )
+        })}
+        </div>
+      </body>
+    </div >
+        )
+      : (
+      <div style={{ padding: '2rem', backgroundColor: '#4ea5d9ff' }} id='projects'>
       <header>
           <SectionTitle color='#ffc857ff'>Projects</SectionTitle>
         </header >
@@ -61,5 +90,6 @@ export default function Projects ({ className, style, projectArray }: Props) {
         </div>
       </body>
     </div >
+        )
   )
 }
