@@ -11,6 +11,7 @@ import StyledComponents from '../../images/Icons/styled-components-1.svg'
 import TypeScript from '../../images/Icons/typescript.svg'
 import Portfolio2 from '../../images/Screenshots/portfolio2.png'
 import Portfolio1 from '../../images/Screenshots/portfolio1.png'
+import Library from '../../images/Screenshots/library_crud.png'
 import HuiWaa from '../../images/Screenshots/huiwaa.png'
 
 export const ProjectsArray: Array<any> = [
@@ -28,15 +29,15 @@ export const ProjectsArray: Array<any> = [
   },
   {
     title: 'Library CRUD',
-    image: '',
+    image: Library,
     icons: [{ icon: ReactIcon, tech: 'React' },
       { icon: JavaScript, tech: 'JavaScript' },
       { icon: Nodejs, tech: 'Node.js' },
       { icon: MariaDB, tech: 'MariaDB' },
       { icon: CSS3, tech: 'CSS3' }
     ],
-    demoHref: 'Deploy me!',
-    codeHref: 'https://github.com/Dillweed5446/library_crud'
+    demoHref: 'https://dillweed5446.github.io/library_crud_front/',
+    codeHref: 'https://github.com/Dillweed5446/library_crud_front'
   },
   {
     title: 'Hui Wa\'a Weather',
