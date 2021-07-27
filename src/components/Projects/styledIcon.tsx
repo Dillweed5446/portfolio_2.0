@@ -15,6 +15,9 @@ justify-content: flex-start;
 align-items: center;
 margin-bottom: 1rem;
 padding: 0 2rem;
+@media (max-width: 650px) {
+  padding: 0.2rem;
+}
 `
 
 const CardIcons = styled.div`
