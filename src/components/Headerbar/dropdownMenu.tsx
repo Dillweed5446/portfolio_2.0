@@ -31,7 +31,7 @@ export default function DropdownMenu ({ children, style, menuOptions }: Props) {
                 ))}
               </MenuContainer>
               </div>
-              : <Button onFocus={handleClick} style={{ cursor: 'pointer' }}
+              : <Button onClick={handleClick} style={{ cursor: 'pointer' }}
               > {children}</Button>
             }
           </OutsideClickHandler>
