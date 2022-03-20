@@ -41,6 +41,10 @@ border-radius: .7rem;
 `
 
 export default function Projects ({ className, style, projectArray }: Props) {
+  function brokenLink (): void {
+    alert('Sorry, project has been deprecated, and no longer has a working demo.  Feel free to explore the code on Github though!')
+  }
+
   return (
     window.matchMedia('(max-device-width: 849px)').matches
       ? (
@@ -57,7 +61,9 @@ export default function Projects ({ className, style, projectArray }: Props) {
             <CardImage src={item.mobileImage}/>
             <StyledIcons iconArray={item.icons}/>
             <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-            <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a>
+              {item.demoHref === ''
+                ? <CardButton onClick={brokenLink}><GoBrowser/>  Demo</CardButton>
+                : <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a> }
             <a href={item.codeHref}><CardButton><FaGithub/>  Code</CardButton></a>
             </div>
           </div>
@@ -81,7 +87,9 @@ export default function Projects ({ className, style, projectArray }: Props) {
             <CardImage src={item.image}/>
             <StyledIcons iconArray={item.icons}/>
             <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-            <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a>
+            {item.demoHref === ''
+              ? <CardButton onClick={brokenLink}><GoBrowser/>  Demo</CardButton>
+              : <a href={item.demoHref}><CardButton><GoBrowser/>  Demo</CardButton></a> }
             <a href={item.codeHref}><CardButton><FaGithub/>  Code</CardButton></a>
             </div>
           </div>

@@ -44,7 +44,7 @@ export const ProjectsArray: Array<any> = [
       { icon: MariaDB, tech: 'MariaDB' },
       { icon: CSS3, tech: 'CSS3' }
     ],
-    demoHref: 'https://dillweed5446.github.io/library_crud_front/',
+    demoHref: '',
     codeHref: 'https://github.com/Dillweed5446/library_crud_front'
   },
   {
@@ -70,7 +70,7 @@ export const ProjectsArray: Array<any> = [
       { icon: CSS3, tech: 'CSS3' },
       { icon: MaterialUI, tech: 'Material-UI' }
     ],
-    demoHref: 'https://mothercupboard.com',
+    demoHref: '',
     codeHref: 'https://github.com/aptlyundecided/mc-frontend'
   },
   {
