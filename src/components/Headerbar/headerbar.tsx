@@ -5,7 +5,7 @@ import { BlogPostsArray } from './blogPosts'
 import OutsideClickHandler from 'react-outside-click-handler'
 import '../../styles/headerbar.css'
 import '../../styles/dropdownMenu.css'
-import resume from '../../Paul_Dill_junior_developer_PDF.pdf'
+import resume from '../../Paul_Dill_frontend_engineer.pdf'
 
 export default function HeaderBar () {
   const [menuOpen, toggleMenu] = useState(false)
